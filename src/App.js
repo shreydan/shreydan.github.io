@@ -49,7 +49,7 @@ function App() {
       title: 'Twitter',
       description: 'read my tweets I guess',
       bgColor: '#26bdf0',
-      icon: '📣️',
+      icon: '🐦️',
       url: 'https://twitter.com/shrey.dan'
     },
     {

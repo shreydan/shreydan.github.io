@@ -1,5 +1,8 @@
-### shreydan.netlify.app
+### Links Page
 
-[shreydan webpage](https://shreydan.netlify.app)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3645d8e2-6a96-4830-95d2-b293490fe29f/deploy-status)](https://app.netlify.com/sites/shreydan/deploys)
+Links:
+[Blog](https://dev.to/shreydan)
+[Youtube](https://youtube.com/channel/UCYq4kx77YS2UQ8D_qhZ8s6g)
+[Twitter](https://twitter.com/shrey.dan)
+[Instagram](https://instagram.com/shrey.dan)
+[LinkedIn](https://linkedin.com/in/shreydan)

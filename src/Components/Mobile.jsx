@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from './Card'
+import CardMobile from './CardMobile'
 import Header from './Header'
 
 const Container = styled.div`
@@ -29,11 +29,11 @@ function Mobile({links}) {
     return (
         <Container>
             <Content>
-                <Header />
+                <Header mobile/>
                 <Cards>
                     {
                         links.map((link, key) => (
-                            <Card link={link} key={key} />
+                            <CardMobile link={link} key={key} />
                         ))
                     }
                 </Cards>

@@ -18,28 +18,31 @@ const Introduction = styled.div`
 
 const HeaderContainer = styled.div`
     display: flex;
-    align-items: center;
+    flex-direction: ${props => props.mobile ? 'column' : 'row'};
+    align-items: ${props => props.mobile ? 'flex-start' : 'center'};
     justify-content: space-between;
     padding-bottom: 2%;
     border-bottom: 3px solid #757575;
+    text-align: ${props => props.mobile ? 'left' : 'right'};
 `
 
 const Image = styled.img`
     height: 18vh;
     width: auto;
     border-radius: 50%;
+    margin-bottom: ${props => props.mobile ? '5%' : 0};
 `
 
-function Header() {
+function Header({mobile}) {
     return (
-        <HeaderContainer>
-        <div>
-            <Hello>Hello 👋️</Hello>
-            <Introduction>
-                I am Shreyas Daniel, a Python and React developer.
-            </Introduction>
-        </div>
-        <Image src={headerImage} alt="shreyas daniel"></Image>
+        <HeaderContainer mobile={mobile}>
+            <Image src={headerImage} mobile={mobile} alt="shreyas daniel"></Image>
+            <div>
+                <Hello>Hello 👋️</Hello>
+                <Introduction>
+                    I am Shreyas Daniel, a Python and React developer.
+                </Introduction>
+            </div>
         </HeaderContainer>
     )
 }
