@@ -50,7 +50,7 @@ function App() {
       description: 'read my tweets I guess',
       bgColor: '#26bdf0',
       icon: '🐦️',
-      url: 'https://twitter.com/shrey.dan'
+      url: 'https://twitter.com/shreydan'
     },
     {
       title: 'Instagram',
