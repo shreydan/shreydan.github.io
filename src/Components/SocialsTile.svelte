@@ -8,19 +8,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-    0px 7px 7px -7px rgba(60, 60, 60, 0.1);
+  box-shadow: 0px 7px 7px -6px rgba(0, 0, 0, 0.2);
 
   text-decoration: none;
   color: black;
   padding: 1.5rem;
   transition-duration: 0.5s;
   cursor: pointer;
-}
-
-.tile:hover {
-  filter: brightness(0.95);
-  transition-duration: 0.7s;
 }
 
 .tile_content {
@@ -48,6 +42,7 @@
 }
 
 .tile_content a {
+  width: 100%;
   text-decoration: none;
   outline: none;
   border: none;
@@ -58,7 +53,13 @@
   background-color: var(--icon-bg);
   color: white;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-align: center;
+  transition-duration: 0.2s;
+}
+.tile_content a:hover {
+  filter: saturate(1.5);
+  transition-duration: 0.2s;
 }
 </style>
 

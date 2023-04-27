@@ -1,5 +1,9 @@
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap");
+
+:global(*) {
+  box-sizing: border-box;
+}
 
 :global(body),
 :global(html) {
@@ -23,26 +27,10 @@
 .title .tagline {
   margin-top: -1%;
 }
-
-.content {
-  align-self: center;
-  margin: 0;
-  width: 60vw;
-  margin-top: 5%;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 11rem);
-  justify-content: center;
-  gap: 2rem;
-
-  margin-bottom: 10rem;
-}
 </style>
 
 <script>
-import Tile from "../Components/Tile.svelte";
-import { links } from "../links.json";
-console.log(links);
+import SocialsContainer from "../Components/SocialsContainer.svelte";
 </script>
 
 <div class="title">
@@ -50,13 +38,4 @@ console.log(links);
   <div class="tagline">Machine Learning Engineer and Researcher</div>
 </div>
 
-<div class="content">
-  {#each links as tile}
-    <Tile
-      title="{tile.name}"
-      url="{tile.url}"
-      btntext="{tile.button}"
-      iconame="{tile.iconame}"
-      icobg="{tile.color}" />
-  {/each}
-</div>
+<SocialsContainer />
