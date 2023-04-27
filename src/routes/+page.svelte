@@ -42,6 +42,8 @@
 
 <script>
 import Tile from "../Components/Tile.svelte";
+import { links } from "../links.json";
+console.log(links);
 </script>
 
 <div class="title">
@@ -50,11 +52,12 @@ import Tile from "../Components/Tile.svelte";
 </div>
 
 <div class="content">
-  <Tile />
-  <Tile />
-  <Tile />
-  <Tile />
-  <Tile />
-  <Tile />
-  <Tile />
+  {#each links as tile}
+    <Tile
+      title="{tile.name}"
+      url="{tile.url}"
+      btntext="{tile.button}"
+      iconame="{tile.iconame}"
+      icobg="{tile.color}" />
+  {/each}
 </div>
