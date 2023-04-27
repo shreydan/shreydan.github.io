@@ -1,0 +1,60 @@
+{
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/shreydan",
+      "color": "#000000",
+      "button": "Code",
+      "iconame": "github"
+    },
+    {
+      "name": "Kaggle",
+      "url": "https://kaggle.com/shreydan",
+      "color": "#742394",
+      "button": "Notebooks",
+      "iconame": "kaggle"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/shreydan",
+      "color": "#0a66c2",
+      "button": "Connect",
+      "iconame": "linkedin"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/shreydan",
+      "color": "#1da1f2",
+      "button": "Follow",
+      "iconame": "twitter"
+    },
+    {
+      "name": "Mastodon",
+      "url": "https://sigmoid.social/@shreydan",
+      "color": "#6364ff",
+      "button": "Follow",
+      "iconame": "mastodon"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com/@shreydan",
+      "color": "#ff0000",
+      "button": "Subscribe",
+      "iconame": "youtube"
+    },
+    {
+      "name": "Mail",
+      "url": "mailto:iamshreydan@gmail.com",
+      "color": "#f05470",
+      "button": "Contact",
+      "iconame": "mail"
+    },
+    {
+      "name": "Resume",
+      "url": "mailto:iamshreydan@gmail.com",
+      "color": "#33cc52",
+      "button": "View",
+      "iconame": "resume"
+    }
+  ]
+}
