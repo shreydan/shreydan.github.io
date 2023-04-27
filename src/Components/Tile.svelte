@@ -1,9 +1,10 @@
 <style>
 .tile {
-  min-height: 10rem;
-  min-width: 10rem;
+  min-height: 8rem;
+  min-width: 8rem;
+  aspect-ratio: 1;
   background-color: var(--bg-color);
-  border-radius: calc(0.2237 * 12rem);
+  border-radius: calc(0.2237 * 8rem);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -12,7 +13,7 @@
 
   text-decoration: none;
   color: black;
-  padding: 2rem;
+  padding: 1.5rem;
   transition-duration: 0.5s;
   cursor: pointer;
 }
@@ -34,15 +35,15 @@
   margin: 0;
 }
 .tile_content #title {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .tile_content #ico {
   display: grid;
   place-items: center;
-  padding: 1rem;
+  padding: 0.75rem;
   aspect-ratio: 1;
-  border-radius: calc(0.2237 * 5rem);
+  border-radius: calc(0.2237 * 4rem);
   background-color: var(--icon-bg);
 }
 
@@ -50,12 +51,14 @@
   text-decoration: none;
   outline: none;
   border: none;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 5rem;
   cursor: pointer;
   transition-duration: 0.2s;
   background-color: var(--icon-bg);
   color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 </style>
 

@@ -1,13 +1,12 @@
 <style>
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 :global(body),
 :global(html) {
   width: 100%;
   margin: 0;
-  font-family: monospace;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -32,7 +31,7 @@
   margin-top: 5%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, 14rem);
+  grid-template-columns: repeat(auto-fill, 11rem);
   justify-content: center;
   gap: 2rem;
 
