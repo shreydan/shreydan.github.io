@@ -8,7 +8,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  box-shadow: 0px 7px 7px -6px rgba(0, 0, 0, 0.2);
 
   text-decoration: none;
   color: black;
