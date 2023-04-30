@@ -31,6 +31,10 @@
 
 <script>
 import SocialsContainer from "../Components/SocialsContainer.svelte";
+export let data;
+
+const { projects } = data;
+console.log(projects);
 </script>
 
 <div class="title">
