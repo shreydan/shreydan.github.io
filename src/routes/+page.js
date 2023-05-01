@@ -16,10 +16,18 @@ export const load = async ({ fetch }) => {
       let data = await res.json();
       data = data.filter((repo) => repo.fork == false);
       let latestRepos = sortByDate(data);
+
       let pyrepos = latestRepos.filter(
         (repo) =>
           repo.language == "Jupyter Notebook" || repo.language == "Python"
       );
+      pyrepos = pyrepos.map((repo) => ({
+        id: repo.id,
+        name: repo.name,
+        description: repo.description,
+        url: repo.html_url,
+      }));
+      pyrepos = pyrepos.slice(0, 6);
       return pyrepos;
     } catch (err) {
       return [];

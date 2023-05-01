@@ -31,10 +31,11 @@
 
 <script>
 import SocialsContainer from "../Components/SocialsContainer.svelte";
+import ProjectsContainer from "../Components/ProjectsContainer.svelte";
+
 export let data;
 
 const { projects } = data;
-console.log(projects);
 </script>
 
 <div class="title">
@@ -43,3 +44,4 @@ console.log(projects);
 </div>
 
 <SocialsContainer />
+<ProjectsContainer projects="{projects}" />

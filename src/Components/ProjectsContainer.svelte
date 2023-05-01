@@ -5,8 +5,10 @@
   width: 60vw;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, 11rem);
+  grid-template-columns: repeat(auto-fit, 11rem);
+
   justify-content: center;
+  align-content: center;
   gap: 2rem;
 
   margin-bottom: 5rem;
@@ -22,19 +24,18 @@
 
 <script>
 import Title from "./Title.svelte";
-import SocialsTile from "./SocialsTile.svelte";
-import { links } from "../links.json";
+import ProjectsTile from "./ProjectsTile.svelte";
+
+export let projects;
 </script>
 
-<Title title="More of me" />
+<Title title="Recent projects" />
 
 <div class="content">
-  {#each links as tile}
-    <SocialsTile
-      title="{tile.name}"
-      url="{tile.url}"
-      btntext="{tile.button}"
-      iconame="{tile.iconame}"
-      icobg="{tile.color}" />
+  {#each projects as tile}
+    <ProjectsTile
+      name="{tile.name}"
+      desc="{tile.description}"
+      url="{tile.url}" />
   {/each}
 </div>
