@@ -56,8 +56,8 @@
   text-align: center;
   transition-duration: 0.2s;
 }
-.tile_content a:hover {
-  filter: saturate(1.5);
+.tile:hover {
+  transform: scale(1.01);
   transition-duration: 0.2s;
 }
 </style>
