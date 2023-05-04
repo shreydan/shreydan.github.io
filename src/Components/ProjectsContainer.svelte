@@ -36,6 +36,7 @@ export let projects;
     <ProjectsTile
       name="{tile.name}"
       desc="{tile.description}"
-      url="{tile.url}" />
+      url="{tile.url}"
+      color="{tile.color}" />
   {/each}
 </div>
