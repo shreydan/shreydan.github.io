@@ -10,7 +10,24 @@ export const load = async ({ fetch }) => {
     return arr;
   }
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
   const fetchGitHub = async () => {
+    const colors = shuffleArray([
+      "#742394",
+      "#F05270",
+      "#33CC52",
+      "#1DA1F2",
+      "#6364FF",
+      "#e60073",
+    ]);
+
     try {
       const res = await fetch(url);
       let data = await res.json();
@@ -21,13 +38,18 @@ export const load = async ({ fetch }) => {
         (repo) =>
           repo.language == "Jupyter Notebook" || repo.language == "Python"
       );
-      pyrepos = pyrepos.map((repo) => ({
+
+      pyrepos = pyrepos.map((repo, idx) => ({
         id: repo.id,
         name: repo.name,
         description: repo.description,
         url: repo.html_url,
+        stars: repo.stargazers_count,
+        forks: repo.forks,
+        color: colors[idx],
       }));
       pyrepos = pyrepos.slice(0, 6);
+
       return pyrepos;
     } catch (err) {
       return [];
