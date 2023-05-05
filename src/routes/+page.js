@@ -29,7 +29,7 @@ export const load = async ({ fetch }) => {
     ]);
 
     try {
-      const res = await fetch(url);
+      const res = await fetch(url, { mode: "cors" });
       let data = await res.json();
       data = data.filter((repo) => repo.fork == false);
       let latestRepos = sortByDate(data);

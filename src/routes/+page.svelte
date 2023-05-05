@@ -43,5 +43,5 @@ const { projects } = data;
   <div class="tagline">Machine Learning Engineer and Researcher</div>
 </div>
 
-<SocialsContainer />
 <ProjectsContainer projects="{projects}" />
+<SocialsContainer />
