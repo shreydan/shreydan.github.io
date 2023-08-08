@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const contacts = [
   {
@@ -28,13 +29,15 @@ function Contact() {
     <div>
       <div>
         {contacts.map((contact, idx) => (
-          <a
+          <Link
             key={idx}
             href={contact.url}
             className={`underline inline-block mr-4`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {contact.name}
-          </a>
+          </Link>
         ))}
       </div>
     </div>

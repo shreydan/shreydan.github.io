@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 async function sortByDate(arr, property = "created_at") {
   arr.sort(function (a, b) {
@@ -58,9 +59,14 @@ async function Github() {
       <div>
         {data.map((repo) => (
           <div key={repo.id} className={`my-4`}>
-            <a href={repo.url} className={`underline ${repo.color}`}>
+            <Link
+              href={repo.url}
+              className={`underline ${repo.color}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {repo.name}
-            </a>
+            </Link>
             <p className={`text-sm w-full md:w-3/4`}>{repo.description}</p>
           </div>
         ))}
