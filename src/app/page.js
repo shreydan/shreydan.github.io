@@ -22,6 +22,15 @@ const OpenForRoles = () => (
   </p>
 );
 
+const BibleVerse = () => (
+  <p
+    className={`text-center mb-6 text-slate-400 w-full md:w-1/2 place-self-center italic`}
+  >
+    I will instruct thee and teach thee in the way which thou shalt go: I will
+    guide thee with mine eye. Psalm 32:8
+  </p>
+);
+
 const Bar = () => (
   <div className={`border-b-[1px] border-solid border-gray-300 mb-6`}></div>
 );
@@ -39,10 +48,12 @@ export default function Home() {
       <Tools />
       <Github />
       <Bar />
+      <BibleVerse />
+      <Bar />
       <Image
         src={sumo}
         alt="an image of my dog Sumo when he was a month old."
-        className={`w-1/2`}
+        className={`w-full md:w-1/2`}
       />
       <p className={`text-sm italic mb-6`}>
         my dog Sumo when he was a month old :)
