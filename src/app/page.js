@@ -12,11 +12,11 @@ I also like to explore & build model architectures from scratch.
 `;
 const intern = `
 I'm currently a Junior Machine Learning Engineer Intern 
-working on federated-split learning applications for bio-medical datasets consisting of CT scans and 3D MRIs.`;
+working on federated-split learning applications for bio-medical datasets consisting of X-Rays and 3D MRIs.`;
 
 const OpenForRoles = () => (
   <p
-    className={`text-justify my-4 px-2 py-2 border-l-4 border-solid border-green-600 bg-green-100`}
+    className={`text-justify mt-4 px-2 py-2 border-l-4 border-solid border-green-600 bg-green-100`}
   >
     I am open to work in a full-time applied ML or research role.
   </p>
@@ -40,11 +40,10 @@ export default function Home() {
     <main className={`flex flex-col w-full md:w-1/2 px-4`}>
       <Navbar />
       <Bar />
-
-      <OpenForRoles />
       <p className={`text-xl font-medium`}>Hello 👋</p>
       <p className={`text-justify`}>{intro}</p>
-      <p className={`text-justify mt-4`}>💼️ {intern}</p>
+      <OpenForRoles />
+      <p className={`text-justify mt-2`}>💼️ {intern}</p>
       <Tools />
       <Github />
       <Bar />
