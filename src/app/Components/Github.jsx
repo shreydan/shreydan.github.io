@@ -67,7 +67,7 @@ async function Github() {
             >
               {repo.name}
             </Link>
-            <p className={`text-sm w-full md:w-3/4`}>{repo.description}</p>
+            <p className={`text-sm w-full text-justify`}>{repo.description}</p>
           </div>
         ))}
       </div>

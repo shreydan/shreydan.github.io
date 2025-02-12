@@ -9,6 +9,7 @@ function Tools() {
     "📈️ WandB",
     "⏭️ fast.ai",
     "🩻 MONAI",
+    "🚀️ MetaFlow",
   ];
 
   return (
