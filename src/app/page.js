@@ -19,7 +19,7 @@ export const Intro = () => (
       Science & Engineering from India.
     </li>
     <li>
-      Currently deploying real-time <Highlight>real-time ML systems</Highlight>
+      Currently deploying <Highlight>real-time ML systems</Highlight>
     </li>
     <li>Focused on Natural Language Processing and Multimodal research</li>
     <li>I enjoy implementing model architectures from scratch!</li>
@@ -95,14 +95,14 @@ export const Paper1 = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          [IEE Explore]
+          [IEEE Xplore]
         </Link>
       </span>
     </p>
     <p className="ml-2 text-xs">
       Applied split-learning on biomedical datasets for 3D segmentation with
       emphasis on communication and computation overhead comparison,
-      model-splitting methods and trade-offs. My experiments improved metrics by
+      model-splitting methods and trade-offs. My experiments improved metrics by{" "}
       <Highlight>30%</Highlight> while reducing computation by{" "}
       <Highlight>29x</Highlight>
     </p>
@@ -111,7 +111,7 @@ export const Paper1 = () => (
 
 const OpenForRoles = () => (
   <p
-    className={`text-justify mt-2 mb-4 px-2 py-2 border-l-4 border-solid border-green-600 bg-green-100`}
+    className={`text-justify mt-2 mb-4 px-2 py-2 border-l-4 border-solid bg-red-300 border-red-600 font-semibold`}
   >
     I am open to work in a full-time applied ML or research role.
   </p>
@@ -121,8 +121,8 @@ const BibleVerse = () => (
   <p
     className={`text-center mb-6 text-slate-400 w-full md:w-1/2 place-self-center italic`}
   >
-    I will instruct thee and teach thee in the way which thou shalt go: I will
-    guide thee with mine eye. Psalm 32:8
+    I will instruct thee and teach thee in the way which thou shalt go:I will
+    guide thee with mine eye. <br></br> Psalm 32:8
   </p>
 );
 
@@ -132,38 +132,65 @@ const Bar = () => (
 
 export default function Home() {
   return (
-    <main className={`flex flex-col w-full md:w-1/2 px-4`}>
-      <Navbar />
-      <Bar />
-      <p className={`text-xl font-medium`}>Hello 👋</p>
-      <Intro />
-      <Bar />
-      <OpenForRoles />
-      <p className={`text-lg mb-6 font-medium`}>
-        💼️ <span className={`underline`}>Work Experience</span>
-      </p>
-      <WorkExperience />
-      <Internship />
-      <Bar />
-      <p className={`text-lg underline mb-6 font-medium`}>
-        Published Research Papers
-      </p>
-      <Paper1 />
-      <Bar />
-      <Tools />
-      <Github />
-      <Bar />
-      <BibleVerse />
-      <Bar />
-      <Image
-        src={sumo}
-        alt="an image of my dog Sumo when he was a month old."
-        className={`w-full md:w-1/2`}
-      />
-      <p className={`text-sm italic mb-6`}>
-        my dog Sumo when he was a month old :)
-      </p>
-      <Bar />
+    <main className="min-h-screen w-screen overflow-x-scroll bg-[#fff7f2]">
+      <div className="w-[95%] max-w-lg mx-auto">
+        <Navbar />
+        <Bar />
+
+        <div className="w-full">
+          <p className="text-xl font-medium">Hello 👋</p>
+          <Intro />
+        </div>
+
+        <Bar />
+
+        <OpenForRoles />
+
+        <div className="w-full mt-6">
+          <h2 className="text-lg font-medium">
+            💼️ <span className="underline">Work Experience</span>
+          </h2>
+          <WorkExperience />
+          <Internship />
+        </div>
+
+        <Bar />
+
+        <div className="w-full mt-6">
+          <h2 className="text-lg font-medium underline">
+            Published Research Papers
+          </h2>
+          <Paper1 />
+        </div>
+
+        <Bar />
+
+        <div className="w-full">
+          <Tools />
+          <Github />
+        </div>
+
+        <Bar />
+
+        <div className="w-full flex justify-center">
+          <BibleVerse />
+        </div>
+
+        <Bar />
+
+        <div className="w-full">
+          <Image
+            src={sumo}
+            alt="an image of my dog Sumo when he was a month old."
+            className="w-11/12 max-w-xs justify-start"
+          />
+          <p className="text-sm italic text-gray-600 text-start mt-2">
+            my dog Sumo when he was a month old :)
+          </p>
+        </div>
+
+        <Bar />
+      </div>
     </main>
   );
 }

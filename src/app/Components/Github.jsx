@@ -17,14 +17,25 @@ function shuffleArray(array) {
   return array;
 }
 
+const Highlight = ({ children, color }) => (
+  <span className="relative inline-block">
+    <span className={`absolute inset-x-0 bottom-0 h-2 ${color}`}></span>
+    <span className="relative">{children}</span>
+  </span>
+);
+
 const getGitHubRepos = async () => {
   const colors = shuffleArray([
-    "text-teal-600",
-    "text-sky-600",
-    "text-purple-600",
-    "text-lime-600",
-    "text-pink-800",
-    "text-red-400",
+    "bg-pink-200", // Soft pastel pink
+    "bg-blue-200", // Light pastel blue
+    "bg-green-200", // Gentle pastel green
+    "bg-yellow-200", // Warm pastel yellow
+    "bg-purple-200", // Muted pastel purple
+    "bg-rose-200", // Blush pastel rose
+    "bg-teal-200", // Cool pastel teal
+    "bg-orange-200", // Soft pastel orange
+    "bg-indigo-200", // Dusty pastel indigo
+    "bg-lime-200", // Refreshing pastel lime"
   ]);
 
   const url = "https://api.github.com/users/shreydan/repos?page=1&per_page=100";
@@ -44,7 +55,7 @@ const getGitHubRepos = async () => {
     forks: repo.forks,
     color: colors[idx],
   }));
-  const githubRepos = pyrepos.slice(0, 6);
+  const githubRepos = pyrepos.slice(0, 10);
   return githubRepos;
 };
 
@@ -59,14 +70,23 @@ async function Github() {
       <div>
         {data.map((repo) => (
           <div key={repo.id} className={`my-4`}>
-            <Link
-              href={repo.url}
-              className={`underline ${repo.color}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {repo.name}
-            </Link>
+            <Highlight color={repo.color}>
+              <Link
+                href={repo.url}
+                className={`hover:underline`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {repo.name}
+              </Link>
+            </Highlight>{" "}
+            {repo.stars > 5 ? (
+              <p className="float-right text-center font-bold">
+                {repo.stars} ⭐️
+              </p>
+            ) : (
+              ""
+            )}
             <p className={`text-sm w-full text-justify`}>{repo.description}</p>
           </div>
         ))}
