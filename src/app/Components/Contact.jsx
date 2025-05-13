@@ -24,7 +24,7 @@ const contacts = [
   },
   {
     name: "Résumé",
-    url: "https://drive.google.com/file/d/1Y1qPmZpu1x9cWVcp20gCFw8JFcZDBBrF/view?usp=sharing",
+    url: "https://bit.ly/shreydan-resume",
   },
 ];
 
